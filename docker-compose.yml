@@ -1,21 +1,21 @@
 version: "3.8"
 services:
     db:
-        image: GisaKaze/ebillingbackend:lastest
+        image: GisaKaze/electricity_token_generator_appbackend:latest
         build:
             context: .
             dockerfile: Dockerfile
         ports:
             - "3306:3306"
     web:
-      image: GisaKaze/ebillingfrontend:latest  
+      image: GisaKaze/electricity_token_generator_appfrontend:latest  
       build:
           context: frontend
           dockerfile: Dockerfile
       ports:
             - "3000:3000"
     api:
-      image: GisaKaze/ebillingapi:latest
+      image: GisaKaze/electricity_token_generator_appapi:latest
       build:
           context: backend
           dockerfile: Dockerfile
