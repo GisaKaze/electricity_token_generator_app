@@ -1,7 +1,32 @@
-FROM mysql
-ENV MYSQL_DATABASE=datastore
-ENV MYSQL_USER=GisaKaze
-ENV MYSQL_PASSWORD=gisakaze123
-ENV MYSQL_ROOT_PASSWORD=gisakaze123
-EXPOSE 3306
-VOLUME [ "/var/lib/mysql" ]
+# Setup and build the frontend
+
+FROM node:16
+
+WORKDIR /usr/app/frontend/
+
+COPY frontend/package*.json ./
+
+RUN npm install 
+
+COPY frontend/ ./
+
+RUN npm run build
+
+
+# Setup the frontend
+
+FROM node:16
+
+WORKDIR /usr/app/backend/
+
+COPY backend/package*.json ./
+
+RUN npm install 
+
+COPY backend/ ./
+
+ENV PORT 8000
+
+EXPOSE 8000
+
+CMD ["npm", "start"]

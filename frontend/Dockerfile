@@ -7,8 +7,8 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:stable-alpine
-COPY /usr/app/build /usr/share/nginx/html
+FROM nginx:stable-alpine    
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
