@@ -15,7 +15,3 @@ This is how to run the application.
    `npm install`
 2. Start the application
    `npm run start`
-
-
-
-From here your good to go!
