@@ -1,0 +1,7 @@
+FROM mysql
+ENV MYSQL_DATABASE=datastore
+ENV MYSQL_USER=GisaKaze
+ENV MYSQL_PASSWORD=gisakaze123
+ENV MYSQL_ROOT_PASSWORD=gisakaze123
+EXPOSE 3306
+VOLUME [ "/var/lib/mysql" ]

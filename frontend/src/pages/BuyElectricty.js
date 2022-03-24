@@ -29,7 +29,7 @@ export default function BuyElectricity() {
             <h1 className="text-3xl font-medium" id="_buy_electricity_page">Buy Electricty</h1>
             {error !== "" && <div className="py-10 text-red-500 w-[400px]" id="ErrorMessage">{error}</div>}
             {isSuccess &&
-                <div className="py-10 text-lg text-green-500 w-[400px]" id="SuccessMessage">Sucessfully Token bought :{token} ..</div>}
+                <div className="py-10 text-lg text-blue-500 w-[400px]" id="SuccessMessage">Sucessfully Token bought :{token} ..</div>}
             <div>
                 <Input type="number" placeholder="Meter_number" data={{ st: meter_number, sts: setMeterNumber }}/>
                 <Input type="number" placeholder="Amount" data={{ st: amount, sts: setAmount }}/>

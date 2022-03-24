@@ -29,7 +29,7 @@ export async function buyToken (req: Request, res: Response) {
             .status(400)
             .send(
                 responseMessage(
-                    "Invalid amount, only multiples of 100 not greater than 182,500 is accepted"
+                    "invalid amount, only multiples of 100 not greater than 182,500 is accepted"
                 )
             );
 
@@ -86,7 +86,7 @@ export async function loadToken (req: Request, res: Response) {
     if (token.status == "USED")
         return res
             .status(400)
-            .send(responseMessage("Token is already used"));
+            .send(responseMessage("Token is used already"));
 
     token.status = "USED";
 

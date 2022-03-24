@@ -6,7 +6,9 @@ import Check from "./pages/Check";
 
 const Home = () => {
     return <div>
-        <h1>Welcome to Electricty Token Seilling App</h1>
+        <h1>
+            Welcome to Electricty Token Selling App
+        </h1>
     </div>
 }
 

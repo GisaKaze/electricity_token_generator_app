@@ -1,0 +1,79 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-16.0.2\bin;C:\Users\User\AppData\Local\Android\Sdk;C:\Users\User\AppData\Local\Android\Sdk\emulator;C:\Users\User\AppData\Local\Yarn\bin;C:\adb\platform-tools;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.3\bin;C:\Users\User\Documents\flutter\bin;C:\Program Files (x86)\Nmap;C:\Program Files\VideoLAN\VLC;C:\Users\User\AppData\Roaming\npm;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.17.5
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\User\AppData\Local\Yarn\Cache\v6\npm-has-flag-3.0.0-b5d454dc2199ae225699f3467e5a07f3b955bafd-integrity\node_modules\has-flag\index.js' -> 'C:\Users\User\OneDrive\Documents\Dmutoni\docker\full-stack-testing-electricty-generator\backend\node_modules\nodemon\node_modules\has-flag\index.js'
+
+npm manifest: 
+  {
+    "name": "nodejstdd",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node dist/index.js",
+      "dev": "nodemon src/index.ts",
+      "build": "tsc -p .",
+      "test": "jest -i",
+      "test:watch": "jest --detectOpenHandles --maxWorkers=1 --watchAll --verbose",
+      "format": "prettier --write '**/*.{js,ts,json,md}'",
+      "postinstall": "pnpm dlx prisma generate",
+      "seed": "ts-node --compiler-options '{\"module\": \"CommonJS\"}"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/veritem/tdd-nodejs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/veritem/tdd-nodejs/issues"
+    },
+    "homepage": "https://github.com/veritem/tdd-nodejs#readme",
+    "dependencies": {
+      "@prisma/client": "^3.8.1",
+      "@types/cors": "^2.8.12",
+      "cors": "^2.8.5",
+      "express": "^4.17.2"
+    },
+    "devDependencies": {
+      "@faker-js/faker": "^6.0.0-alpha.5",
+      "@types/express": "^4.17.13",
+      "@types/jest": "^27.4.0",
+      "@types/node": "^17.0.8",
+      "@types/supertest": "^2.0.11",
+      "@types/uuid": "^8.3.4",
+      "jest": "^27.4.7",
+      "jest-mock-extended": "^2.0.4",
+      "nodemon": "^2.0.15",
+      "prettier": "^2.5.1",
+      "supertest": "^6.2.1",
+      "ts-jest": "^27.1.2",
+      "ts-node": "^10.4.0",
+      "typescript": "^4.5.4",
+      "undici": "^4.12.2",
+      "uuid": "^8.3.2"
+    },
+    "prisma": {
+      "seed": "node --loader ts-node/esm prisma/seed.ts"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

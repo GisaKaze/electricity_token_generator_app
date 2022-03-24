@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+    db:
+        image: GisaKaze/ebillingbackend:lastest
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "3306:3306"
+    web:
+      image: GisaKaze/ebillingfrontend:latest  
+      build:
+          context: frontend
+          dockerfile: Dockerfile
+      ports:
+            - "3000:3000"
+    api:
+      image: GisaKaze/ebillingapi:latest
+      build:
+          context: backend
+          dockerfile: Dockerfile
+      ports:
+            - "8001:8001"

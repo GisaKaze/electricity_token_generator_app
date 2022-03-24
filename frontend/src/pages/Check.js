@@ -30,7 +30,7 @@ export default function Check() {
             {error !== "" &&
                 <div title="Error" className="py-10 text-red-500 w-[400px]" id="ErrorMessage">{error}</div>}
             {isSuccess &&
-                <div id="SuccessMessage" className="py-10 text-lg text-green-500 w-[400px]">Success you have electirity
+                <div id="SuccessMessage" className="py-10 text-lg text-blue-500 w-[400px]">Success you have electirity
                     for {days} days</div>}
             <div>
                 <Input type="string" placeholder="Meter_number" title="meter_number_input"
